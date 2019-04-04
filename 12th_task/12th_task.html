@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="i-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Palindrome(initial_array){
+                var modArray = initial_array.toLowerCase().replace(/[^a-z,A-Z,0-9]+/g,'');
+                var counter = 0;
+                if(modArray==="") {console.log("Empty set");}
+                    if ((modArray.length) % 2 === 0) {counter = (modArray.length) / 2;}
+                    else if (modArray.length === 1) {console.log(" palindrome.");}
+                    else 
+                    {counter = (modArray.length - 1) / 2;}
+                for (var i = 0; i < counter; i++) {
+                    if (modArray[i] != modArray.slice(--i)[0]) {console.log(" It isn´t a  palindrome.");}}
+                console.log("It is a fucking palindrome.");
+            }
+            console.log(Palindrome("Germany"));
+    </script>
+</body>
+</html>
